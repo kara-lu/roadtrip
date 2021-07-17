@@ -1,0 +1,144 @@
+<!DOCTYPE html> 
+<html lang="en"></html> 
+<head>  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Road Trip</title>  
+     <!-- jQuery and jQuery UI -->
+     <script
+     src="https://code.jquery.com/jquery-3.5.1.js"
+     integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+     crossorigin="anonymous"></script>
+    <script
+     src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+     integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+     <!-- end jQuery -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/769604f610.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <!-- favicon -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="favicon/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="favicon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="favicon/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="favicon/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="favicon/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+    <!-- end favicon -->
+
+</head>  
+<body>
+    <div class="container">
+        <header class="screen-reader-text">
+            <h1>Road Trip Game</h1>  
+        </header> 
+
+        <div id="preSplash" class="screen">
+            <img src="images/preSplash.jpg" alt="game company logo">
+            <div class="buttonContainer">
+                <div id="soundOff" class="button flat">SOUND OFF</div>
+            </div>
+            <div class="buttonContainer">
+                <div id="soundOn" class="button flat">SOUND ON</div>
+            </div>
+        </div>
+
+        <div id="splash" class="screen">
+            <video width="1000" height="600" preload loop muted autoplay>
+                <source src="videos/Snow.mp4" type="video/mp4">
+            </video>
+            <img id="splashCar" class="bounce-in-fwd" src="images/splash-car.png" alt="a car">
+            <img id="splashHit" class="rotate-center" src="images/splash-hit.png" alt="hit cartoon shape">
+            <img id="splashRun" class="vibrate-2" src="images/splash-run.png" alt="run cartoon shape">
+            <img id="splashMoose" class="bounce-in-fwd" src="images/splash-moose.png" alt="a moose">
+            <img id="splashWolf" class="bounce-in-fwd" src="images/splash-wolf.png" alt="a wolf">
+            <img id="splashShock" class="wobble-hor-bottom" src="images/splash-shock.png" alt="shock cartoon shape">
+            <img id="titleCard" class="bounce-in-top" src="images/title.png" alt="road trip title card">
+            <img src="images/splash.jpg" alt="mountains and sky">
+            <div id="playIcon">
+                <div class="sqrButton fade-in-fwd"><i class="fas fa-play"></i></div>
+            </div>
+        </div>
+
+        <div id="inputScreen" class="modal">
+            <div class="boxInBox">
+                <h2>ENTER YOUR NAME TO START</h2>
+                <input type="text" id="playerImputName" required maxlength="6">
+            </div>
+            <div class="buttonContainer">
+                <div id="returnButton" class="button">RETURN</div>
+            </div>
+            <div class="buttonContainer">
+                <div id="playGame" class="button yellow disabled">START</div>
+            </div>
+        </div>
+
+        <div id="game" class="screen">  
+            <div id = "overlay" class="modal">
+                <p>MOVE YOUR CAR WITH THE ARROW KEY</p>
+                <i class="fas fa-arrow-left"></i><i class="fas fa-arrow-right"></i>
+            </div>
+            <video id="gameSnow" width="1000" height="600" preload loop muted autoplay>
+                <source src="videos/Snow.mp4" type="video/mp4">
+            </video>
+            <p id="gameDisplay"><span id="playerDisplayName"></span>: <span id="distanceTraveled"></span>KM</p>
+            <div id="pauseButton" class="button">PAUSE</div>
+            <canvas id="canvas1"></canvas>  
+        </div>
+
+        <div id="gameOver" class="screen">
+            <div id=gameoverContent>
+                <img src="images/gameoverIcon.png" alt="game over">
+                <h2>SCORE: <span id=finalScore></span> KM</h2>
+                <p class="result">OH NOs <span id=playerName></span>, YOU HIT A <span id=hitWhatAnimal></span></p>
+                <img id ="imgResult" class="result" src="images/moose-dead.png" alt="the animal the player hit">
+                <div id="playAgainButton" class="button yellow">PLAY AGAIN</div>
+                <div id="quitToSplash" class="button">QUIT</div>
+            </div>
+        </div>
+
+        <div id = "pausePage" class="modal">
+            <img src="images/pausedIcon.png" alt="game paused">
+            <div class="boxInBox">
+                <p>MOVE YOUR CAR WITH THE ARROW KEY</p>
+                <i class="fas fa-arrow-left"></i><i class="fas fa-arrow-right"></i>
+            </div>
+            <div class="ok button yellow">RESUME</div>
+            <div id="quitButton" class="button">QUIT</div>
+        </div>
+
+        <div id="screenCover" class="screen"></div>
+
+    </div>
+    
+    <audio id="click" preload="auto" src="audios/click.mp3"></audio>
+    <audio id="affirmClick" preload="auto" src="audios/affirmClick.mp3"></audio>
+    <audio id="failClick" preload="auto" src="audios/failClick.ogg"></audio>
+    <audio id="introAudio" preload="auto"   src="audios/intro.mp3"></audio>
+    <audio id="gameAudio" preload="auto" loop src="audios/game.mp3"></audio>
+    <audio id="gameOverAudio" preload="auto"  src="audios/gameover.mp3"></audio>
+
+    <script src="scripts/game.js"></script>  
+</body>  
+</html>  
+    
+

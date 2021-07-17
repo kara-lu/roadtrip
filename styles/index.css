@@ -1,0 +1,321 @@
+
+h1{
+  text-align: center;
+}
+h2{
+  color: white;
+  font-weight: 700;
+  margin: 20px 0 20px 0;
+}
+/* ------------------------------------------------------------------------------buttons */
+.buttonContainer{
+  display: inline-block;
+}
+.button{
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin: 10px 20px;
+  width: 186px;
+  height: 50px;
+  box-shadow:inset 0px 32px 0px -10px #ffffff;
+	background:linear-gradient(to bottom, #fcfcfc 5%, #e3e3e3 100%);
+	background-color:#fcfcfc;
+	border-radius:9px;
+	border:4px solid #d5d5d5;
+	display:inline-block;
+	cursor:pointer;
+	color:#4e4e4e;
+	padding:14px 32px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #adadad;
+  text-align: center;
+  line-height: 15px;
+}
+.button:hover {
+	background:linear-gradient(to bottom, #e3e3e3 5%, #fcfcfc 100%);
+	background-color:#e3e3e3;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+.button.yellow{
+	box-shadow:inset 0px 32px 0px -10px #ffda48;
+	background:linear-gradient(to bottom, #f2d977 5%, #ffcc00 100%);
+	background-color:#f2d977;
+	border:4px solid #cda400;
+	color:#4e4e4e;
+	text-shadow:0px -1px 0px #adadad;
+}
+.button.yellow:hover {
+	background:linear-gradient(to bottom, #ffcc00 5%, #f2d977 100%);
+	background-color:#ffcc00;
+}
+.button.flat{
+  box-shadow:none;
+  background:none;
+  border:2px solid white;
+  color:white;
+  text-shadow:none;
+}
+.button.flat:hover{
+  background:white;
+  color:#1EA7E1;
+}
+#pauseButton{
+  width: 110px;
+  height: 40px;
+  padding:10px 5px;
+  font-size: 1rem;
+  box-shadow:inset 0px 28px 0px -10px #ffffff;
+  line-height: 14px;
+  margin:30px 80px 0 0;
+}
+/* --------------------------------------------------------------------------------------- */
+
+
+
+body{
+  background-color: rgb(251,255,255);
+  margin-top: 10rem;
+  font-family: 'Lato', sans-serif;
+}
+.container {
+  position: relative;
+  width: 1000px;
+  height: 600px;
+  margin: 0 auto;
+}
+#game{
+  position: relative;
+  width: 1000px;
+  height: 600px;
+  overflow: hidden;
+}
+#game img{
+  position: absolute;
+  z-index: 10;
+}
+#game div{
+  position: absolute;
+}
+#splash{
+  background-color:lightgray;
+  width: 1000px;
+  height: 600px;
+  text-align: center;
+}
+.modal{
+  background-color: #1EA7E1;
+  border-style: solid;
+  border-color: #166E93;
+  border-width: 5px;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+}
+#screenCover{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  width:1000px;
+  height:600px;
+  top:0;
+  left:0;
+  z-index: 20;
+}
+
+/* -------------------------------------------------------------- pre splash layout */
+
+#soundOff{
+  position: absolute;
+  top:360px;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+#soundOn{
+  position: absolute;
+  top:360px;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* ------------------------------------------------------------- splash page layout */
+#splash{
+  position: relative;
+}
+video{
+  position: absolute;
+  width: 1000px;
+  height: 600px;
+  object-fit: cover;
+  mix-blend-mode: screen;
+  z-index: 3;
+}
+#titleCard{
+  position: absolute;
+  top:60%;
+  left:26%;
+  transform: translate(-50%, -50%);
+}
+#splashCar{
+  position: absolute;
+  top:20%;
+  left:31%;
+  transform: translate(-50%, -50%);
+}
+#splashMoose{
+  position: absolute;
+  top:34%;
+  left:16%;
+  transform: translate(-50%, -50%);
+}
+#splashWolf{
+  position: absolute;
+  top:40%;
+  left:60%;
+  transform: translate(-50%, -50%);
+}
+#splashHit{
+  position: absolute;
+  top:30%;
+  left:20%;
+  transform: translate(-50%, -50%);
+}
+#splashRun{
+  position: absolute;
+  top:54%;
+  left:58%;
+  transform: translate(-50%, -50%);
+}
+#splashShock{
+  position: absolute;
+  top:32%;
+  left:69%;
+  transform: translate(-50%, -50%);
+}
+#playIcon{
+  position: absolute;
+  bottom:40px;
+  left:50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+.sqrButton {
+	box-shadow:inset 0px 36px 0px -10px #35baf3;
+	background:linear-gradient(to bottom, #35baf3 5%, #1ea7e1 100%);
+	background-color:#35baf3;
+	border-radius:9px;
+	border:4px solid #1988b8;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:20px 23px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #1ea7e1;
+}
+.sqrButton:hover {
+	background:linear-gradient(to bottom, #1ea7e1 5%, #35baf3 100%);
+	background-color:#1ea7e1;
+}
+.sqrButton:active {
+	position:relative;
+	top:2px;
+}
+input{
+  width:290px;
+  height:50px;
+  border-width: 3px;
+  margin-bottom: 20px;
+  border-style: solid;
+  border-color: #707070;
+  font-size: 1.5rem;
+}
+.boxInBox{
+  background-color: #35BAF3;
+  width:600px;
+  border-radius: 20px;
+  padding: 20px 30px;
+  margin: 20px 30px;
+}
+
+
+/* -------------------------------------------------------------- game page layout */
+
+#pauseButton{
+  z-index: 20;
+  position: absolute;
+  right:0;
+  top:0;
+}
+#gameDisplay{
+  display: inline-block;
+  position: absolute;
+  top:20px;
+  left:60px;
+  background-color: lightgray;
+  border-style: solid;
+  border-radius: 10px;
+  padding:0.5rem 2rem;
+  z-index: 20;
+  margin: 0;
+}
+#gameDisplay{
+  background-color: #fcfcfc;
+  border-style: solid;
+  border-color: #d5d5d5;
+  border-radius: 5px;
+}
+#overlay i,
+#overlay p{
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 1rem 1rem;
+}  
+
+/* ------------------------------------------------------------------- pause page */
+#pausePage i,
+#pausePage p{
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 1rem 1rem;
+}
+
+/* -------------------------------------------------------------------------- game over */
+#gameOver{
+  background-color:#166E93;
+  width: 1000px;
+  height: 600px;
+  position: relative;
+  text-align: center;
+}
+#gameOver h2{
+  color: #ffcc00;
+}
+#gameOver p{
+  color: white;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 1rem 1rem;
+}  
+#gameoverContent{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#gameoverContent img{
+  display: block;
+  margin: 1rem auto;
+}
