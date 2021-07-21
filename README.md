@@ -1,6 +1,7 @@
 # RoadTrip
 
 A JavaScript vertical driving game.
+* [Link to Game](https://karalu.ca/roadtrip/index.html)
 
 ## Description
 
@@ -15,6 +16,8 @@ A fun vertical scroll driving game created with JavaScript and jQuery includes a
 ## Authors
 
 Kara Lu
+
+## Project Page
 https://karalu.ca/project/6
 
 ## Version History
